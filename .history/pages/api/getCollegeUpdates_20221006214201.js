@@ -6,14 +6,14 @@ export default function handler(requestHandler, responseHandler) {
     'url': 'http://www.manit.ac.in/',
   };
   
-  request(options, function (a, b) {
-    if (a) throw new Error(a);
-    const $ = cheerio.load(b.body);
+  request(options, function (err, res) {
+    if (err) throw new Error(err);
+    const $ = cheerio.load(res.body);
     var list = [];
     $('div[class="modal-body quick"]').find('div > p > a').each(function (index, element) {
       list.push($(element).attr('href'));
     });
     console.log(list);
-    responseHandler.send(list);
+    response.send(list);
   });
 }
