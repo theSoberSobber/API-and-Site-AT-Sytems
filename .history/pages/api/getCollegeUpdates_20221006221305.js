@@ -14,8 +14,8 @@ export default function handler(requestHandler, responseHandler) {
       links: []
     };
     $('div[class="modal-body quick"]').find('div > p > a').each(function (index, element) {
-      list.innerText.push($(element).text());
-      list.links.push($(element).attr('href'));
+      list.innerText.push($(element).attr('innerText'));
+      list.links.push(list.$(element).attr('href'));
     });
     console.log(list);
     responseHandler.json(list);
