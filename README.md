@@ -1,17 +1,12 @@
 ## AT-system-API&Site
-To run the project -
-- git clone it
-- run yarn to install dependencies
+
+Run/Setup Local Dev Enviornment -
+- git clone
+- 'yarn'/'yarn install' to install dependencies
 - make .env.local file in the root of the folder, put the following in it
     - MONGODB_URI = <your mongoDB uri here>
-- yarn dev to run "next dev" script
-
-Please go to mongoDbTest.js in ./pages/api to understand the flow <br />
-There, you will find some comments describing the schema and flow, they are pretty easy to understand <br />
-Setup your mongoAtlas deployment accordingly (make the same database name and collections) and then put the URI to connect in the .env.local file (make one). <br />
-You can help in implmenting it in the api and actually replacing all the hardcoded constratinsts to actual parameters. <br />
-Test by actually dsending the requests to the api hosted at your localhost when you run yarn dev.
-
-<br />
-Thank for your time for contributing!
-    - Ramesh, the only GOD
+- 'yarn start'/'yarn dev' depending upon your reequirements
+---
+### Contributing - 
+Please see the CONTRIBUTING.md in root folder <br />
+Thank you for considering contributing!
